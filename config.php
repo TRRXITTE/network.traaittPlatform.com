@@ -1,6 +1,6 @@
 <?php
 return array(
-        'api' => 'https://asia-southeast.traaitt.com',
+        'api' => 'https://us-west.traaitt.com',
         'blockTargetInterval' => 644,
         'coinUnits' => 100000000
 );
