@@ -183,9 +183,9 @@
                     cache: 'false',
                     success: function(data) {
                     block = data.result.block;
-                        updateText('totalCoins', getReadableCoins(block.alreadyGeneratedCoins,2));
-                        updateText('emissionPercent', (block.alreadyGeneratedCoins / totalSupply * 100).toFixed(4));
-                        updateText('currentReward', getReadableCoins(block.baseReward,4));
+                        updateText('totalCoins', getReadableCoins(block.alreadyGeneratedCoins,1));
+                        updateText('emissionPercent', (block.alreadyGeneratedCoins / totalSupply * 100).toFixed(2));
+                        updateText('currentReward', getReadableCoins(block.baseReward,2));
                     }
                 });
             }
@@ -457,8 +457,8 @@
                         var timestamp = Date().now; // this is not yet part of the json that gets returned in f_transactions_pool_json, leave for now
                         var columns =
                             /*'<td>' + formatDate(timestamp) + ' (<span class="mtx-ago"></span>)' + '</td>' +*/
-                            '<td>' + getReadableCoins(amount, 4, true) + '</td>' +
-                            '<td>' + getReadableCoins(fee, 4, true) + '</td>' +
+                            '<td>' + getReadableCoins(amount, 8, true) + '</td>' +
+                            '<td>' + getReadableCoins(fee, 8, true) + '</td>' +
                             '<td>' + localizeNumber(size) + '</td>' +
                             '<td>' + formatPaymentLink(hash) + '</td>';
                         row.innerHTML = columns;
